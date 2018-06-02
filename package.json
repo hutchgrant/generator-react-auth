@@ -1,0 +1,44 @@
+{
+  "name": "generator-react-auth",
+  "version": "0.0.1",
+  "description": "Yeoman generator based on hutchgrant/react-boilerplate",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "hutchgrant/generator-react-auth",
+  "author": {
+    "name": "Grant Hutchinson",
+    "email": "h.g.utchinson@gmail.com",
+    "url": "https://github.com/hutchgrant"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "react-boilerplate",
+    "generator-react-auth",
+    "react-auth",
+    "react",
+    "node-express",
+    "authentication",
+    "redux",
+    "code-splitting",
+    "google+",
+    "admin",
+    "dashboard"
+  ],
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.0.3"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
