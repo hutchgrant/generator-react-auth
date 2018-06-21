@@ -262,15 +262,25 @@ module.exports = yeoman.generators.Base.extend({
           this.props.recaptchaSecret || 'some-google-recaptcha-secret',
         googleClientID: this.props.googleClientID || 'some-google-client-id',
         googleClientSecret:
-          this.props.googleClientSecret || 'some-google-client-secret'
+          this.props.googleClientSecret || 'some-google-client-secret',
+        facebookClientID:
+          this.props.facebookClientID || 'some-facebook-client-id',
+        facebookClientSecret:
+          this.props.facebookClientSecret || 'some-facebook-client-secret',
+        twitterConsumerID:
+          this.props.twitterConsumerID || 'some-twitter-consumer-id',
+        twitterConsumerSecret:
+          this.props.twitterConsumerSecret || 'some-twitter-consumer-secret'
       };
 
       console.log(res);
 
       env.configShared(res, function(err) {
         env.configDev(res, function(err) {
-          if (err) throw err;
-          done();
+          env.configClient(res, function(err) {
+            if (err) throw err;
+            done();
+          });
         });
       });
     }

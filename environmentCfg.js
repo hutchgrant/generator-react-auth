@@ -7,6 +7,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 module.exports = {
+  // Configure shared node environments
   configShared(res, cb) {
     let env =
       'MONGO_URI=' +
@@ -68,6 +69,20 @@ module.exports = {
     });
   },
 
+  // Configure baked React client environment
+  configClient(res, cb) {
+    let env = 'REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY=' + res.recaptchaKey;
+    fs.truncate('client/.env', 0, function() {
+      fs.writeFile('client/.env', env, function(err) {
+        if (err) {
+          return cb(err);
+        }
+        cb();
+      });
+    });
+  },
+
+  // Configure local dev node environment
   configDev(res, cb) {
     let env =
       'MONGO_URI=' +
