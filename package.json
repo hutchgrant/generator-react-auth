@@ -1,6 +1,6 @@
 {
   "name": "generator-react-auth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yeoman generator based on hutchgrant/react-boilerplate",
   "license": "MIT",
   "main": "app/index.js",
