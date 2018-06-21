@@ -33,7 +33,7 @@ module.exports = {
       'SITE_NAME=' +
       res.site +
       '\n' +
-      'GOOGLE+RECAPTCHA_SECRET=' +
+      'GOOGLE_RECAPTCHA_SECRET=' +
       res.recaptchaSecret +
       '\n' +
       'REACT_APP_GOOGLE_RECAPTCHA_SITE_KEY=' +
