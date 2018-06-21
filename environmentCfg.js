@@ -44,6 +44,18 @@ module.exports = {
       '\n' +
       'GOOGLE_CLIENT_SECRET=' +
       res.googleClientSecret +
+      '\n' +
+      'FACEBOOK_CLIENT_ID=' +
+      res.facebookClientID +
+      '\n' +
+      'FACEBOOK_CLIENT_SECRET=' +
+      res.facebookClientSecret +
+      '\n' +
+      'TWITTER_CONSUMER_ID=' +
+      res.twitterConsumerID +
+      '\n' +
+      'TWITTER_CONSUMER_SECRET=' +
+      res.twitterConsumerSecret +
       '\n';
 
     fs.truncate('config/shared.env', 0, function() {

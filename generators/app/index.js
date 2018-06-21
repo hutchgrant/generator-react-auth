@@ -99,6 +99,15 @@ module.exports = yeoman.generators.Base.extend({
         when: function(response) {
           return response.environment;
         },
+        name: 'redirect',
+        message:
+          'What address do you want to redirect clients to after they sign in to your API?',
+        default: 'http://localhost:3000'
+      },
+      {
+        when: function(response) {
+          return response.environment;
+        },
         name: 'recaptchaKey',
         message:
           'What is your Google Invisible Recaptcha Key? https://www.google.com/recaptcha',
@@ -135,10 +144,37 @@ module.exports = yeoman.generators.Base.extend({
         when: function(response) {
           return response.environment;
         },
-        name: 'redirect',
+        name: 'facebookClientID',
         message:
-          'What address do you want to redirect clients to after they sign in to your API?',
-        default: 'http://localhost:3000'
+          'What is your Facebook signin OAuth2.0 Client ID? https://github.com/hutchgrant/react-boilerplate/blob/master/docs/README_CONFIG.md#facebook-signin',
+        default: 'your-facebook-client-id'
+      },
+      {
+        when: function(response) {
+          return response.environment;
+        },
+        name: 'facebookClientSecret',
+        message:
+          'What is your Facebook+ signin OAuth2.0 Client Secret? https://github.com/hutchgrant/react-boilerplate/blob/master/docs/README_CONFIG.md#facebook-signin',
+        default: 'your-facebook-client-secret'
+      },
+      {
+        when: function(response) {
+          return response.environment;
+        },
+        name: 'twitterConsumerID',
+        message:
+          'What is your Twitter signin OAuth2.0 Consumer ID? https://github.com/hutchgrant/react-boilerplate/blob/master/docs/README_CONFIG.md#twitter-signin',
+        default: 'your-twitter-consumer-id'
+      },
+      {
+        when: function(response) {
+          return response.environment;
+        },
+        name: 'twitterConsumerSecret',
+        message:
+          'What is your Twitter signin OAuth2.0 Consumer Secret? https://github.com/hutchgrant/react-boilerplate/blob/master/docs/README_CONFIG.md#twitter-signin',
+        default: 'your-twitter-consumer-secret'
       }
     ];
 
